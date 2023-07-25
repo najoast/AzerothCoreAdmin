@@ -148,11 +148,13 @@ MangAdmin:RegisterDefaults("account",
 Locale:EnableDynamicLocales(true)
 --Locale:EnableDebugging()
 Locale:RegisterTranslations("enUS", function() return Return_enUS() end)
+Locale:RegisterTranslations("zhCN", function() return Return_zhCN() end)
 -- Register String Traslations
 Strings:EnableDynamicLocales(true)
 Strings:RegisterTranslations("enUS", function() return ReturnStrings_enUS() end)
+Strings:RegisterTranslations("zhCN", function() return ReturnStrings_zhCN() end)
 --Locale:Debug()
---Locale:SetLocale("enUS")
+Locale:SetLocale("zhCN")
 
 MangAdmin.consoleOpts = {
   type = 'group',
@@ -1898,7 +1900,7 @@ function MangAdmin:InitDropDowns()
 --      {"Romanian","roRO"},
 --      {"Russkiy","ruRU"},
 --      {"Svenska","svSV"},
---      {"Chinese","zhCN"},
+     {"简体中文","zhCN"},
 --      {"Bulgarian", "buBU"}
     }
     for k,v in pairs(buttons) do
